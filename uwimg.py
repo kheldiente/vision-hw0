@@ -30,6 +30,10 @@ get_pixel = lib.get_pixel
 get_pixel.argtypes = [IMAGE, c_int, c_int, c_int]
 get_pixel.restype = c_float
 
+copy_image = lib.copy_image
+copy_image.argtypes = [IMAGE]
+copy_image.restype = IMAGE
+
 set_pixel = lib.set_pixel
 set_pixel.argtypes = [IMAGE, c_int, c_int, c_int, c_float]
 
@@ -45,6 +49,9 @@ hsv_to_rgb.argtypes = [IMAGE]
 
 shift_image = lib.shift_image
 shift_image.argtypes = [IMAGE, c_int, c_float]
+
+scale_image = lib.scale_image
+scale_image.argtypes = [IMAGE, c_int, c_float]
 
 clamp_image = lib.clamp_image
 clamp_image.argtypes = [IMAGE]
